@@ -1,0 +1,12 @@
+<div class="location-data" *ngIf="weatherData$ | async as vm">
+  <div class="row d-flex flex-column">
+    <h3>Location: {{vm.location}}</h3>
+    <h3>Sunrise: {{vm.sunrise | date : 'mediumTime'}}</h3>
+    <h3>Sunset: {{vm.sunset | date : 'mediumTime'}}</h3>
+    <h3>Current conditions: {{vm.condition}}</h3>
+    <h3>Temperature: {{vm.temperature}}<span>&#8457;</span></h3>
+    <h3>Humidity: {{vm.humidity}}%</h3>
+    <h3>Wind speed: {{vm.windSpeed}} mph</h3>
+    <h3>Wind direction: {{vm.windDirection}}<span>&deg;</span></h3>
+  </div>
+</div>
